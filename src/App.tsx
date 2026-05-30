@@ -96,7 +96,7 @@ export default function App() {
               </FadeIn>
 
               <AnimatedHeading 
-                text={"Preserving heritage\nwhile shaping scholars."}
+                text={"Preserving heritage\nwhile shaping \nscholars."}
                 className="mb-4 text-4xl font-medium tracking-tight text-white [text-shadow:0_4px_16px_rgba(0,0,0,0.6)] sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl xl:text-8xl"
               />
               
