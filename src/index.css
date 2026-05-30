@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+  --color-maroon-900: #2A0005;
+  --color-maroon-800: #4A000A;
+  --color-maroon: #7B0016;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-maroon-900);
+  color: white;
+}
+
+.liquid-glass {
+  background: rgba(42, 0, 5, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(212, 175, 55, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(212,175,55,0.6) 0%, rgba(212,175,55,0.1) 20%,
+    rgba(212,175,55,0) 40%, rgba(212,175,55,0) 60%,
+    rgba(212,175,55,0.1) 80%, rgba(212,175,55,0.5) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
